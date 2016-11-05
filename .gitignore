@@ -1,0 +1,7 @@
+.swp
+Gemfile.lock
+.DS_Store
+.Spotlight-V100
+.Trashes
+Gemfile
+.env

@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
    include BCrypt
 
 	 def create
-     @user = User.new({username: params[:username],
+     @user = User.new({first_name: params[:first_name],
+                       last_name: params[:last_name],
                        email: params[:email]})
      @user.password = params[:password]
      @user.save!

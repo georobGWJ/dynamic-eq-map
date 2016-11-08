@@ -4,6 +4,10 @@ get '/events' do
   erb :"/events/index"
 end
 
+get '/data_viz' do
+  erb :"/partials/_data_viz"
+end
+
 # GET Route | RETURN an HTML/erb FORM for CREATING a new AR Object
 get '/events/new' do
   # your code here

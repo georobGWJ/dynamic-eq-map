@@ -1,17 +1,23 @@
 $(document).ready(function () {
   displayDefault();
   tabListener();
-  // event.preventDefault();
-
-  // Hide all of the tabs and then show ONLY the one that you clicked on
-  // $(".tab-content").hide();
-  // $tab_id.show();
+  displayDefault();
 });
 
 var displayDefault = function() {
   // Find and display content of first (default) tab
   var start = $("li").first().children().first().attr("href");
-  $( start ).show();
+    // event.preventDefault();
+
+    var onLoad = $.ajax({
+      method: 'GET',
+      url: start
+      })
+
+    onLoad.done(function(response) {
+      $(".display-bottom").html(response);
+      });
+
 }
 
 var tabListener = function() {
@@ -23,5 +29,19 @@ var tabListener = function() {
     // AJAX CALLS SHOULD GO HERE!!!
     tab_id = $(event.target).attr("href");
     $tab_id = $( tab_id );
+
+    var showDataTab = function() {
+      var action = tab_id;
+
+      var showData = $.ajax({
+        method: 'GET',
+        url: action
+        })
+
+     showData.done(function(response) {
+       //console.log(response);
+       $(".display-bottom").html(response);
+       });
+
   });
 }

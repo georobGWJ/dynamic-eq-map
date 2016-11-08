@@ -1,16 +1,16 @@
-get '/users/?' do
-   redirect "/"
+get '/users' do
+  erb :"/users/index"
 end
 
 #NEW (GET)
 
-get '/users/new/?' do
+get '/users/new' do
    erb :'/users/_new.html', layout: !request.xhr?
 end
 
 #SHOW (GET)
 
-get '/users/:id/?' do
+get '/users/:id' do
 
    @user = User.find(params[:id])
 
@@ -24,10 +24,7 @@ end
 
 #CREATE (POST)
 
-post '/users/?' do
-   p '=================='
-   p params
-   p '=================='
+post '/users' do
 
    if params[:password_confirmation] == params[:password]
       @user = User.create({first_name: params[:first_name],

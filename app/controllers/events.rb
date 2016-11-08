@@ -1,7 +1,7 @@
 # GET Route | DISPLAY a list of ALL AR Objects
 get '/events' do
   # your code here ...
-  # erb :'/events/index'
+  erb :"/events/index"
 end
 
 # GET Route | RETURN an HTML/erb FORM for CREATING a new AR Object

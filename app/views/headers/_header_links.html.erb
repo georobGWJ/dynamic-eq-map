@@ -5,7 +5,16 @@
       <input type="submit" value="Logout">
    </form>
 <% else %>
-   <a class="register_link" href="/users/new">REGISTER</a>
-   <br/>
-   <a class="login_link" href="/sessions/login">LOG IN</a>
+<table id="header-table">
+  <tr>
+    <td id="header-left">
+      <h2>Dynamic Earthquake Mapper</h2>
+    </td>
+    <td id="header-right">
+      <a class="home-page" href="/">HOME</a><br>
+      <a class="register_link" href="/users/new">REGISTER</a><br>
+      <a class="login_link" href="/sessions/login">LOG IN</a>  
+    </td>
+  </tr>
+</table>
 <% end %>

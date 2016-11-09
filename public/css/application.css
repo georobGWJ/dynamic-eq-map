@@ -13,6 +13,9 @@
 
 
 .container {
+    background-image: "images/carrizo_plains.png";
+    background-repeat: no-repeat;
+    opacity: 20%;
     margin: auto;
     width: 90%;
 }

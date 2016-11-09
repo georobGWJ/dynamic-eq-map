@@ -5,7 +5,7 @@ end
 #NEW (GET)
 
 get '/users/new' do
-   erb :'/users/_new.html', layout: !request.xhr?
+   erb :'/partials/_new.html', layout: !request.xhr?
 end
 
 #SHOW (GET)
@@ -33,7 +33,7 @@ post '/users' do
                         password: params[:password]})
    else
       @errors = "Passwords do not match!"
-      erb :'/users/_new.html', layout: !request.xhr?
+      erb :'/partials/_new.html'
    end
 
 # {"first_name"=>"Robert", "last_name"=>"Turner", "email"=>"georob23@gmail.com", "password"=>"password", "password_confirmation"=>"password", "Create Account"=>"Submit"}
